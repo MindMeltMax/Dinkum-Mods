@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <AssemblyName>MindMeltMax.PeacefulHot</AssemblyName>
+    <Description>Peacefull wish works in Hot Hot Hot</Description>
+    <Version>1.0.0</Version>
+    <LangVersion>latest</LangVersion>
+    <PackageId>MindMeltMax.PeacefulHot</PackageId>
+    <Authors>MindMeltMax</Authors>
+    <Product>Peaceful Hot Hot Hot</Product>
+    <RootNamespace>PeacefulHot</RootNamespace>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <FileVersion>1.0.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BepInEx.Analyzers" Version="1.0.8" PrivateAssets="all" />
+    <PackageReference Include="BepInEx.Unity" Version="6.0.0-*" IncludeAssets="compile" />
+    <PackageReference Include="BepInEx.PluginInfoProps" Version="2.1.0" />
+    <PackageReference Include="UnityEngine.Modules" Version="2022.2.0-beta.2" IncludeAssets="compile" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" />
+  </ItemGroup>
+  
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugType>Full</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\Libs\Dinkum\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\Libs\Dinkum\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\Libs\Dinkum\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\Libs\Dinkum\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Mirror">
+      <HintPath>..\Libs\Dinkum\Mirror.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
